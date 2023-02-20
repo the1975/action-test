@@ -1,6 +1,9 @@
 name: GitHub Actions Demo
 on:
-  issues: [opened, reopened]
+  issues:
+    types:
+      - opened
+      - reopened
 jobs:
   Auto-assign:
     runs-on: ubuntu-latest
