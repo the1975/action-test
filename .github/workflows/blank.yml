@@ -8,4 +8,9 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            require('./script/reviewRequest.js')({github, context})
+            const fs = require('fs');
+            fs.readdir('./', (err, files) => {
+              files.forEach(file => {
+                console.log(file);
+              });
+            });
