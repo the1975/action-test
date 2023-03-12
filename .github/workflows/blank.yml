@@ -1,9 +1,6 @@
 name: Review request
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
+  push
 jobs:
   review-request:
     runs-on: ubuntu-latest
